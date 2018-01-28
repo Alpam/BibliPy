@@ -1,9 +1,9 @@
 #
 ############################################################
 #
-#        Filename: __init__.py
+#        Filename:
 #
-#     Description: global package import
+#     Description:
 #
 #         Version:  1.0
 #  Python Version:  3.x
@@ -14,4 +14,7 @@
 
 #!/usr/bin/python3
 
-
+from os import mkdir
+from shutil import rmtree
+from . import dir_func
+from . import file_func

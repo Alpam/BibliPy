@@ -14,9 +14,14 @@
 
 #!/usr/bin/python3
 
-from factory import db_factory
+from factory import dir_func, file_func
 
-print("creation")
-db_factory.create("./","t1")
-print("suppression")
-db_factory.delete("./t1")
+def create(location,name):
+    dir_func.create(location, name)
+    f = file_func.create(location, name)
+    f.write(name)
+    f.close
+    return
+
+def delete(location):
+    dir_func.delete_all(location)

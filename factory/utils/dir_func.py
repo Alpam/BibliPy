@@ -14,9 +14,14 @@
 
 #!/usr/bin/python3
 
-from factory import db_factory
+from . import mkdir
+from . import rmtree
 
-print("creation")
-db_factory.create("./","t1")
-print("suppression")
-db_factory.delete("./t1")
+def create(location, name):
+    try :
+        mkdir(location+name)
+    except OSError:
+        print("Chemin :"+location+" invalide.")
+
+def delete_all(location):
+    rmtree(location)

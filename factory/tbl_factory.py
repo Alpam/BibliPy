@@ -14,9 +14,5 @@
 
 #!/usr/bin/python3
 
-from factory import db_factory
-
-print("creation")
-db_factory.create("./","t1")
-print("suppression")
-db_factory.delete("./t1")
+def create(location, tbl_n, tbl_db):
+    return

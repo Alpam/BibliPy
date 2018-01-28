@@ -1,9 +1,9 @@
-#
+
 ############################################################
 #
-#        Filename: __init__.py
+#        Filename:
 #
-#     Description: global package import
+#     Description:
 #
 #         Version:  1.0
 #  Python Version:  3.x
@@ -14,5 +14,10 @@
 
 #!/usr/bin/python3
 
-from os import mkdir
+def create(location, name):
+    try :
+        f=open(location+name+"/"+name+".conf",'w')
+    except OSError:
+        print("Impossible de créer le fichier de configuration de la db.")
+    return f
 
