@@ -14,9 +14,8 @@
 
 #!/usr/bin/python3
 
-from factory import db_factory
+from factory import db_factory, tbl_factory
 
-print("creation")
-db_factory.create("./","t1")
-print("suppression")
-db_factory.delete("./t1")
+db_factory.create("./test","t1")
+tbl_factory.create("./test/t1","t1","tbl1")
+tbl_factory.create("./test/t1","t1","tbl2")

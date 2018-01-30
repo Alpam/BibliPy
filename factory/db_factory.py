@@ -17,11 +17,10 @@
 from factory import dir_func, file_func
 
 def create(location,name):
-    dir_func.create(location, name)
-    f = file_func.create(location, name)
-    f.write(name)
-    f.close
+    db_location = location+"/"+name
+    dir_func.create(db_location)
+    file_func.addDb(db_location, name)
     return
 
 def delete(location):
-    dir_func.delete_all(location)
+    dir_func.deleteAll(location)

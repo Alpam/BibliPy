@@ -14,5 +14,10 @@
 
 #!/usr/bin/python3
 
-def create(location, tbl_n, tbl_db):
+from factory import dir_func, file_func
+
+def create(db_location, db_name, tbl_name):
+    dir_func.create(db_location+"/"+tbl_name)
+    file_func.addTbl(db_location, tbl_name, db_name)
     return
+

@@ -17,11 +17,11 @@
 from . import mkdir
 from . import rmtree
 
-def create(location, name):
+def create(location):
     try :
-        mkdir(location+name)
+        mkdir(location)
     except OSError:
         print("Chemin :"+location+" invalide.")
 
-def delete_all(location):
+def deleteAll(location):
     rmtree(location)
