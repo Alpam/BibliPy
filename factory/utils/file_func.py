@@ -35,6 +35,6 @@ def addDb(path, name):
 
 def addTbl(path, tbl_name, db_name):
     writeAtEnd(path+"/"+db_name+".conf", tbl_name+"::")
-    writeAtEnd(path+"/"+tbl_name+"∕"+tbl_name+".conf", tbl_name+"\n")
+    writeAtEnd(path+"/"+tbl_name+"/"+tbl_name+".conf", tbl_name+"\n")
     
 

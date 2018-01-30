@@ -19,3 +19,4 @@ from factory import db_factory, tbl_factory
 db_factory.create("./test","t1")
 tbl_factory.create("./test/t1","t1","tbl1")
 tbl_factory.create("./test/t1","t1","tbl2")
+
